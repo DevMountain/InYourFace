@@ -19,6 +19,7 @@
 		71B97BCC19404DE800A52635 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71B97BB419404DE800A52635 /* UIKit.framework */; };
 		71B97BD419404DE800A52635 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 71B97BD219404DE800A52635 /* InfoPlist.strings */; };
 		71B97BD619404DE800A52635 /* InYourFaceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B97BD519404DE800A52635 /* InYourFaceTests.m */; };
+		71B97BE119404DF400A52635 /* IFAlertDelegateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B97BE019404DF400A52635 /* IFAlertDelegateViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		71B97BD119404DE800A52635 /* InYourFaceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "InYourFaceTests-Info.plist"; sourceTree = "<group>"; };
 		71B97BD319404DE800A52635 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		71B97BD519404DE800A52635 /* InYourFaceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InYourFaceTests.m; sourceTree = "<group>"; };
+		71B97BDF19404DF400A52635 /* IFAlertDelegateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFAlertDelegateViewController.h; sourceTree = "<group>"; };
+		71B97BE019404DF400A52635 /* IFAlertDelegateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFAlertDelegateViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,8 @@
 			children = (
 				71B97BBF19404DE800A52635 /* IFAppDelegate.h */,
 				71B97BC019404DE800A52635 /* IFAppDelegate.m */,
+				71B97BDF19404DF400A52635 /* IFAlertDelegateViewController.h */,
+				71B97BE019404DF400A52635 /* IFAlertDelegateViewController.m */,
 				71B97BC219404DE800A52635 /* Images.xcassets */,
 				71B97BB719404DE800A52635 /* Supporting Files */,
 			);
@@ -242,6 +247,7 @@
 			files = (
 				71B97BBD19404DE800A52635 /* main.m in Sources */,
 				71B97BC119404DE800A52635 /* IFAppDelegate.m in Sources */,
+				71B97BE119404DF400A52635 /* IFAlertDelegateViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
