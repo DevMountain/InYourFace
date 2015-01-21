@@ -17,31 +17,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self showAlertView];
+    [self presentAlertViewController];
 }
 
-- (void)showAlertView {
-
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:[self randomTitle] message:@"You only have 2 options:" delegate:self cancelButtonTitle:@"Never again!" otherButtonTitles:@"Hit me baby", nil];
-    alertView.delegate = self;
-    [alertView show];
+- (void)presentAlertViewController {
     
-}
-
-- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
-
-    if (buttonIndex == 1) {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:[self randomTitle] message:@"You only have 2 options:" preferredStyle:UIAlertControllerStyleAlert];
     
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:[self randomTitle] message:@"You only have 2 options:" delegate:self cancelButtonTitle:@"Never again!" otherButtonTitles:@"Hit me baby", nil];
-        alertView.delegate = self;
-        [alertView show];
-
-        
-    }
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Hit me baby" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+        [self presentAlertViewController];
+    }]];
     
-    if (buttonIndex == 0) {
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Never again!" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
         NSLog(@"I'll never show the alert again.");
-    }
+    }]];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 - (NSString *)randomTitle {
