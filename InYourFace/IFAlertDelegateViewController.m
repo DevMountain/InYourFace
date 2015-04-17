@@ -24,27 +24,27 @@
     
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:[self randomTitle] message:@"You only have 2 options:" preferredStyle:UIAlertControllerStyleAlert];
     
-    [alertController addAction:[UIAlertAction actionWithTitle:@"Never again!" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Never again!" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
         NSLog(@"I'll never show the alert again.");
     }]];
     
-    [alertController addAction:[UIAlertAction actionWithTitle:@"Hit me baby" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Hit me baby" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         [self presentAlertViewController];
     }]];
     
-    [self presentViewController:alertController animated:YES completion:nil];
+    [self.navigationController presentViewController:alertController animated:YES completion:nil];
 }
 
 - (NSString *)randomTitle {
 
-    int index = arc4random_uniform([self lines].count);
+    int index = (arc4random_uniform((int)([self lines].count)));
     return [self lines][index];
     
 }
 
 - (NSArray *)lines {
 
-    return @[@"If peeing is cool, consider me Miles Davis",
+    return @[@"If peeing your pants is cool, consider me Miles Davis",
              @"We don't need no stinking badges",
              @"Thank you very little",
              @"You can't fight in here. This is a war room.",
